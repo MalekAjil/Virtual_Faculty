@@ -1,0 +1,143 @@
+﻿<html>
+<head>
+
+<title>About Hitech</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+
+.spanstyle {
+	COLOR: black ; FONT-FAMILY: Verdana; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+
+a {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #0099FF;
+}
+.style1 {
+	text-align: center;
+}
+.style17 {
+	text-align: right;
+}
+.style55 {
+	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style23 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style52 {
+	text-align: right;
+	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style56 {
+	font-size: small;
+}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = " hitech ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (document.layers) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (document.layers) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("span" + (i) + ".style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && document.layers) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.span" + i);
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+// End -->
+</script>
+
+
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="makesnake()">
+<center>
+<div align="center" dir="rtl" style="width: 444px" class="style1">
+					<span lang="ar-sa">
+					<p class="style17"><span class="style55"><strong>أولاً- يجب 
+					أن يسدد المتقدم رسوم التسجيل المقررة في </strong></span>
+					<font class="style23"><span class="style56">
+					<strong>النظام المالي للكلية </strong></span></font>
+					<span class="style55"><strong>والأقساط التي يقررها </strong>
+					</span><font class="style23">
+					<span class="style56"><strong>مجلس الكلية </strong></span>
+					</font><span class="style55"><strong>سنويًا ( التعامل يكون 
+					عبر البطاقات المصرفية أو البنوك).</strong></span></p>
+					<p class="style52"><strong>ثانيًا- يجري قبول الطلاب على 
+					النحو التالي:</strong></p>
+					<p class="style17"><span class="style55"><strong>• يجري 
+					التسجيل قبل بداية كل فصل،ويباشر الطلاب الدراسة بعد تسجيلهم 
+					وتسديدهم للأقساط المترتبة عليهم وفقًا للنظام 
+					المالي للكلية</strong></span><span class="style56"> .</span><span lang="ar-sa" class="style55"><strong>
+					</strong></span></p>
+					<p class="style52"><strong>• تحدد إدارة الكلية في بداية كل 
+					عام دراسي معايير قبول الطلاب الذين يرغبون بالتسجيل.</strong></p>
+					<p class="style52"><strong>• يمكن 
+					للطالب قبل بداية كل فصل اختيار المواد الجديدة التي يريد 
+					دراستها في هذا الفصل من ضمن المواد المتاحة، وذلك شريطة أن 
+					يكون قد قدم مسبقًا امتحان جميعا لمواد التي تسبق المواد 
+					المختارة وفق شجرة الارتباط التي تحدد أسبقية 
+					المواد 
+					وارتباطاتها ببعضها البعض.</strong></p>
+					<p class="style52"><strong>• يمكن 
+					للطالب في كل فصل التسجيل على سبع مواد كحد أعلى، وكانت المواد 
+					المختارة تحترم شجرة الارتباط التي تحدد أسبقية 
+					المواد 
+					وارتباطاتها ببعضها البعض.</strong></p>
+					<p class="style52"><strong>• يمكن للطالب في كل فصل 
+					التسجيل على ثلاث مواد كحد أدنى، وكانت المواد المختارة تحترم 
+					وفق شجرة الارتباط التي تحدد أسبقية 
+					المواد 
+					وارتباطاتها ببعضها البعض.</strong></p>
+					</span>
+</div>
+</center>
+
+
+
+
+</body>
+</html>

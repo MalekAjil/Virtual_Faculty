@@ -1,0 +1,13 @@
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.pdb
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.pdb
+E:\mm\SenderAndReceiver\Final\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\Final\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.pdb
+E:\mm\SenderAndReceiver\Final\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\Final\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.pdb
+C:\Users\eng M.M\Desktop\Final_Video\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.dll
+C:\Users\eng M.M\Desktop\Final_Video\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.pdb
+C:\Users\eng M.M\Desktop\Final_Video\SocketCoder_WebCamSender.Web\obj\Debug\WebCamSender.Web.csprojResolveAssemblyReference.cache
+C:\Users\eng M.M\Desktop\Final_Video\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.dll
+C:\Users\eng M.M\Desktop\Final_Video\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.pdb

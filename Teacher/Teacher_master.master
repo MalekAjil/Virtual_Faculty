@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Teacher_master.master.cs" Inherits="Student_master" %>
+
+
+
+<%@ Register src="linksWUC.ascx" tagname="linksWUC" tagprefix="uc1" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+             <%: Page.Title %> - VIF </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../MyStyle.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 90%;
+            height:100%;
+            background-color: #FFFFFF;
+        }
+        .auto-style2 {
+            height: 94px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+               
+            <table align="center" class="auto-style1" dir="rtl"  cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        &nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True"></asp:Label>
+                    &nbsp;
+                        <img alt="" height="25" src="../Images/GIF/will26.gif" /></td>
+                    <td align="left">
+                        <asp:Button ID="Button1" runat="server" BackColor="Silver" Font-Bold="True" ForeColor="Blue" OnClick="Button1_Click" Text="تسجيل الخروج" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="auto-style2">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="../Images/default_banner.jpg" Width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="style4" style="height: 35px">
+                        <uc1:linksWUC ID="linksWUC1" runat="server" />
+                    </td>
+                </tr>
+               
+                <tr>
+                     <td style="width:200px;" >
+                         <table style="width:200px;">
+                             <tr><td>
+ <a href="Default.aspx"><img src="../Images/GIF/home38.GIF" border="0" /></a>
+                                 </td></tr>
+                             <tr><td>
+                         <a href="Add_Lecture.aspx">
+                                <img src="../Images/Button/‫btn9.jpg" alt="اضافة محاضرة" width="200"
+                                 id="img9" name="img9" border="0" onmouseover="this.src='../Images/Button/‫btn9_1.jpg'" 
+                                onmouseout="this.src='../Images/Button/‫btn9.jpg'" 
+                                onmousedown="this.src='../Images/Button/‫btn9_2.jpg'"
+                                 onmouseup="this.src='../Images/Button/‫btn9_1.jpg'" /></a>
+                      </td></tr>
+                         <tr><td>
+                         <a href="Add_Files.aspx">
+                                <img src="../Images/Button/‫btn10.jpg" alt="اضافة ملفات لمحاضرة" width="200"
+                                 id="img1" name="img9" border="0" onmouseover="this.src='../Images/Button/‫btn10_1.jpg'" 
+                                onmouseout="this.src='../Images/Button/‫btn10.jpg'" 
+                                onmousedown="this.src='../Images/Button/‫btn10_2.jpg'"
+                                 onmouseup="this.src='../Images/Button/‫btn10_1.jpg'" /></a>
+                             </td></tr>
+                         </table>
+                         <br />
+                        <br />
+                    </td>
+                    <td style="width:100%;" >
+                         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                    </td>
+                   
+                </tr>
+            <tr>
+		<td colspan="2" align="center" class="auto-style5"> 
+		    <asp:Label ID="Label3" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                </td>
+		
+	</tr>
+            <tr>
+		<td colspan="2" align="center" class="auto-style5"> 
+		    <div class="text-center">
+		<span lang="ar-sa" class="style29"><span lang="ar-sa" class="style109">
+		<strong></strong></span><a href="../default.aspx" class="style111"><strong>الصفحة 
+		الرئيسية</strong></a><span class="style23"><strong> ||&nbsp; </strong>
+		</span><a href="../Learning.aspx" class="style111"><strong>قسم التعليم</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><a href="../Forum.aspx" class="style111"><strong>منتدى الطلاب</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><a href="../about_us.aspx" class="style111"><strong>من نحن</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><strong><a href="../Contact_us.aspx" class="style111">للتواصل معنا ..&nbsp;</a></strong><br />
+                <br>
+		<strong>
+				
+				<table style="width: 118px; height: 0px;" align="center" cellspacing="0" cellpadding="0" class="style42">
+					<tr>
+						<td class="style16">
+						    <a title="google" href="http://www.google.com/VIF">
+						<img alt="" src="../images/Google.png" width="20" height="20" 
+
+class="style69"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="twitter" href="http://www.twitter.com/VIF">
+						<img alt="" src="../images/twitter.png" width="20" height="20" 
+
+class="style69"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="facebook" href="http://www.facebook.com/VIF">
+						<img alt="" src="../images/FaceBook.png" width="20" height="20" 
+
+class="style70"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="yutube" href="http://www.yutube.com/VIF">
+						<img alt="" src="../images/youtube.png" width="20" height="21" 
+
+class="style69"></a>&nbsp;
+
+						</td>
+					</tr>
+    			</table>
+			</strong></span></div></td>
+		
+	</tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <hr width="70%" margin="auto" color="#555555" />
+                        <asp:Label ID="Label1" runat="server" Text="All Rights Reserved for &lt; Virtual Informatics Faculty &gt; &amp;copy 2015" Font-Bold="True" Font-Size="Small" ForeColor="#666633"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        
+       
+    </div>
+    </form>
+</body>
+</html>

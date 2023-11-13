@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="admin_AdminMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - administration</title>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">      
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    
+
+  <script type="text/javascript">
+ 
+
+      function CheckNumeric() {
+ 
+
+          if ((event.keyCode < 48 || event.keyCode > 57)) {
+ 
+
+              event.returnValue = false;
+ 
+
+          }
+ 
+
+      }
+ 
+
+      </script>
+    <webopt:BundleReference ID="BundleReference2" runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+  
+</head>
+<body style="background-image:url('../Images/05.gif')">
+    
+    <form id="Form2" runat="server">
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    Virtual Informatics Faculty</p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                                               <li><a id="loginLink" runat="server" href="../Account/Login.aspx">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Hello, <a id="A1" runat="server" class="username" href="../Account/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
+                                </a>!
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="../" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li><a id="A2" runat="server" href="../admin/">Home</a></li>
+                        <li><a id="A3" runat="server" href="../about_us.aspx">About</a></li>
+                        <li><a id="A4" runat="server" href="../Contact_us.aspx">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body" style="text-align:center;">
+        <br />
+        <asp:Label ID="Label1" runat="server"  Text="Virtual Informatics Faculty Administration" Font-Bold="True" Font-Names="Shortcut" ForeColor="#CC0000" Font-Size="X-Large"></asp:Label>
+                <br />
+                
+             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+       
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div>
+                <p class="auto-style1">
+                   <center> All Rights Reserved &lt; Virtual Informatics Faculty &gt; &copy 2015 </center></p>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+     </form>
+</body>
+</html>

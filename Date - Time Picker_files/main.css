@@ -1,0 +1,34 @@
+
+.center {
+	TEXT-ALIGN: center
+}
+.framed {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; PADDING-BOTTOM: 3px; MARGIN: 5px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 3px
+}
+.gray {
+	COLOR: #999
+}
+TEXTAREA.richtext {
+	WIDTH: 673px; HEIGHT: 400px
+}
+INPUT.timepicker {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 75px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+INPUT.datepicker {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 100px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+INPUT.datetimepicker {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 140px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+INPUT.datetimepicker_es {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 140px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+INPUT.colorpicker {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 100px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+INPUT.filechooser {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 300px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+.ratingcontainer {
+	TEXT-ALIGN: right; FLOAT: right
+}

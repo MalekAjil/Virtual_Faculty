@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="default.aspx" title="الصفحة الرئيسية"  description="">
+    <siteMapNode url="" title="التسجيل"  description="">
+      <siteMapNode url="Sign_up.aspx" title="تسجيل جديد"  description="تسجيل طالب جديد في الكلية الافتراضية" />
+      <siteMapNode url="sign_in.aspx" title="تسجيل الدخول"  description="الدخول الى الكلية باسم المستخدم وكلمة السر" />
+      <siteMapNode url="register_sub.aspx" title="تسجيل مواد"  description="اختيار المواد التي ستدرسها" />
+    </siteMapNode>
+
+   
+      
+    <siteMapNode url="Learning.html" title="قسم التعليم "  description="من هنا ستدخل لحضور المحاضرات وتحميل الملفات" />
+    <siteMapNode url="forum.aspx" title="منتدى الطلاب"  description="المنتديات" />
+    <siteMapNode url="ref.aspx" title="مراجع وشهادات"  description="شهادات عالمية" />
+
+    <siteMapNode url="whatvif.aspx" title="ماهي VIF "  description="" />
+    <siteMapNode url="whyvif.aspx" title="لماذا VIF وإلى أين"  description="" />
+    <siteMapNode url="howtojoin.aspx" title="كيف انضم إلى VIF"  description="" />
+
+  </siteMapNode>
+  
+</siteMap>

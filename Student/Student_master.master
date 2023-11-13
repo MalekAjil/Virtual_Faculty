@@ -1,0 +1,201 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Student_master.master.cs" Inherits="Student_master" %>
+
+<%@ Register src="linksWUC.ascx" tagname="linksWUC" tagprefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+     
+       <%: Page.Title %> </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../MyStyle.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 90%;
+            
+            background-color: #FFFFFF;
+         border-collapse: collapse;
+        }
+        .auto-style2 {
+            height: 94px;
+        }
+        .linkStyle {
+            vertical-align:text-top;
+            background-color:#303030;        
+            color:#ff6a00;
+            font-family:ae_AlArabiya;        
+        }
+        a {
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        
+            <asp:Image ID="Image2" runat="server" Width="100" Height="100" style="z-index: 1; left: 150px; top: 200px; position: absolute"/>
+       
+        
+            <table align="center" cellpadding="0" class="auto-style1" dir="rtl">
+                <tr>
+                    <td >
+                        مرحباً بك عزيزي الطالب :
+                        <asp:Label ID="Label2" runat="server" Font-Bold="True"></asp:Label>
+                    
+                   
+                        </td>
+                    <td align="left"> 
+                        <img src="../Images/GIF/will7.GIF" height="22" align="center" />
+                        <asp:Button ID="Button1" runat="server" BackColor="Silver" Font-Bold="True" ForeColor="Blue" OnClick="Button1_Click" Text="تسجيل الخروج"/>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="auto-style2">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/default_banner.jpg" Width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="style4" style="height: 40px">
+                        <uc1:linksWUC ID="linksWUC1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                     <td class="linkStyle" rowspan="3">
+                         <table style="width:230px; vertical-align:top;">
+                             
+                              <%
+                             try
+                             {
+                                 int season = (DateTime.Now.Month < 10 && DateTime.Now.Month >= 5 ? 2 : 1);
+
+                                 db.cn.Open();
+                                 //DataRow dr;
+                                 System.Data.DataTable dt = db.select(string.Format("select * from course where c_id in(select c_id from std_crs where std_id = {0}) and c_season = {1} ", Convert.ToInt32(Session["std_num"]), season));
+                                 if (dt.Rows.Count != 0)
+                                 {
+                                     Response.Write("<tr><td> المواد المسجلة</td></tr><ul>");
+
+                                     foreach (System.Data.DataRow dtr in dt.Rows)
+                                     {
+                                         Response.Write("<tr><td><li><a href='course.aspx?c_id=" + dtr["c_id"] + "'>" + dtr["c_name"] + "</a></td></tr>");
+                                        /*
+                                         Response.Write("<ol>");
+                                         System.Data.DataTable dtt = db.select("select * from lecture where c_id =" + dtr["c_id"]);
+                                         if (dtt.Rows.Count != 0)
+                                         {
+                                             
+                                             foreach (System.Data.DataRow dr in dtt.Rows)
+                                             {
+                                                 Response.Write("<li><a href='" + dr["l_id"] + ".aspx'>" + dr["l_name"] + "</a>");
+                                             }
+                                         }
+                                         else
+                                         {
+                                             Response.Write("<li>لا يوجد محاضرات لهذه المادة حاليأ ");
+                                         }
+                                         Response.Write("</ol>");
+                                         * */
+                                     }
+                                         
+                                     Response.Write("</ul>");
+                                 }
+                                 else
+                                 {
+                                     Response.Write( "عذراً أنت لم تسجل مواداً بعد عليك تسجيل مواد جديدة من صفحة  <a href='../register_sub.aspx'> تسجيل مواد </a>");
+                                     
+                                 }
+                             }
+
+                             catch (Exception ex)
+                             {
+                                 Label3.Text = ex.Message;
+                             }
+                             finally { db.cn.Close(); }
+        
+                             
+                              %>
+                        </table>
+                          <br />
+                             
+                <asp:Label ID="Label3" runat="server" ForeColor="Red"></asp:Label>
+                             
+                        
+                    </td>
+                    <td width="100%">
+                         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                    </td>
+                   
+                </tr>
+            <tr>
+                
+		<td colspan="2" align="center" class="auto-style5"> 
+		    <div class="text-center">
+		       <br />
+		<span lang="ar-sa" class="style29"><span lang="ar-sa" class="style109">
+		<strong></strong></span><a href="../default.aspx" class="style111"><strong>الصفحة 
+		الرئيسية</strong></a><span class="style23"><strong> ||&nbsp; </strong>
+		</span><a href="default.aspx" class="style111"><strong>قسم التعليم</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><a href="../Forum.aspx" class="style111"><strong>منتدى الطلاب</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><a href="../about_us.aspx" class="style111"><strong>من نحن</strong></a><span 
+
+class="style23"><strong>&nbsp; ||&nbsp; 
+		</strong></span><strong><a href="../Contact_us.aspx" class="style111">للتواصل معنا ..&nbsp;</a></strong><br />
+                <br>
+		<strong>
+				
+				<table style="width: 118px; height: 0px;" align="center" cellspacing="0" cellpadding="0" class="style42">
+					<tr>
+						<td class="style16">
+						    <a title="google" href="http://www.google.com/VIF">
+						<img alt="" src="../images/Google.png" width="20" height="20" 
+
+class="style69"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="twitter" href="http://www.twitter.com/VIF">
+						<img alt="" src="../images/twitter.png" width="20" height="20" 
+
+class="style69"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="facebook" href="http://www.facebook.com/VIF">
+						<img alt="" src="../images/FaceBook.png" width="20" height="20" 
+
+class="style70"></a>&nbsp;</td>
+						<td class="style16">
+						<a title="yutube" href="http://www.yutube.com/VIF">
+						<img alt="" src="../images/youtube.png" width="20" height="21" 
+
+class="style69"></a>&nbsp;
+
+						</td>
+					</tr>
+    			</table>
+			</strong></span></div></td>
+		
+	</tr>
+            <tr>
+                
+                <td colspan="2" align="center">
+                    <hr width="70%" margin="auto" color="#555555" />
+                        <asp:Label ID="Label1" runat="server" Text="All Rights Reserved for &lt; Virtual Informatics Faculty &gt; &amp;copy 2015" Font-Bold="True" Font-Size="Small" ForeColor="#666633"></asp:Label>
+                    </td>
+                
+                </tr>
+            </table>
+        
+       
+    </div>
+    </form>
+</body>
+</html>

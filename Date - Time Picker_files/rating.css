@@ -1,0 +1,21 @@
+.rating_bar {
+	HEIGHT: 20px
+}
+.rating_star {
+	WIDTH: 20px; BACKGROUND: url(rating-star.png) no-repeat 0px 0px; FLOAT: left; HEIGHT: 20px
+}
+.rating_hover {
+	BACKGROUND: url(rating-star.png) no-repeat 0px -20px
+}
+.rating_on {
+	BACKGROUND: url(rating-star.png) no-repeat 0px -40px
+}
+.rating_half {
+	BACKGROUND: url(rating-star.png) no-repeat 0px -60px
+}
+.rating_loading {
+	WIDTH: 20px; BACKGROUND: url(rating-loading.gif) no-repeat 2px 2px; FLOAT: left; HEIGHT: 20px
+}
+.rating_label {
+	FONT-SIZE: 11px
+}

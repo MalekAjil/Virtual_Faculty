@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VIFaculty" Class="dataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=mk-pc;Initial Catalog=VIFaculty;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VIFacultyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Std_Log" Member="Std_Logs">
+    <Type Name="Std_Log">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="std_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="std_log_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_log_pass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="log_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Student_Std_Log" Member="Student" ThisKey="std_id" OtherKey="std_id" Type="Student" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Teacher" Member="Teachers">
+    <Type Name="Teacher">
+      <Column Name="t_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="t_fname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_lname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_father" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_mother" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_birth_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="t_birth_place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="t_social_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_diploma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_specialization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_log_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_log_pass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t_picture" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="std_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="std_d_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="std_fname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_lname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_father" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_mother" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_birth_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="std_birth_place" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="std_social_status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_diploma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_specialization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="std_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="std_reg_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="std_year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="std_remains_sub" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="std_picture" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="Student_Std_Log" Member="Std_Logs" ThisKey="std_id" OtherKey="std_id" Type="Std_Log" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lecture" Member="Lectures">
+    <Type Name="Lecture">
+      <Column Name="l_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="c_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="l_num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="l_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="l_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="l_time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="l_file" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="l_pdf" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

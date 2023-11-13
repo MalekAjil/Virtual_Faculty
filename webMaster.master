@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="webMaster.master.cs" Inherits="webMaster" %>
+<%@ Register src="linksWUC.ascx" tagname="linksWUC" tagprefix="uc1" %>
+<%@ Register src="FooterWUC.ascx" tagname="FooterWUC" tagprefix="uc2" %>
+<html lang="ar-sy" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title><%: Page.Title %> - VIF</title>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="MyStyle.css" />
+    <style type="text/css">
+        .table-style1 {
+            width: 90%;                      
+            text-align:center;
+            vertical-align:top;
+            background-color:white;
+                    }
+
+         
+        .tdStyle1 {
+        width:200px;
+       
+        }
+        .tdContent-style {
+        height :100%;
+        background-color:white;
+        vertical-align:top;
+        }
+          a {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #00ff05;
+}
+
+      
+        </style>
+</head>
+<body >
+    <form id="form2" runat="server">
+        <table class="table-style1" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="200px">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/02.jpg" Width="100%" Height="100%" />
+                </td>
+            </tr>
+            <tr>
+                 <td colspan="2" class="style4" style="height: 45px">
+                    <uc1:linksWUC ID="linksWUC1" runat="server" />
+                    </td>
+                           </tr>
+            
+            <tr>
+                <td class="tdContent-style">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="Small" PathSeparator=" &gt;&gt; " Font-Bold="True">
+                        <CurrentNodeStyle ForeColor="#333333" Font-Bold="True" Font-Size="Small" />
+                        <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                    </asp:SiteMapPath>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+		<td  align="center" > 
+		    <uc2:FooterWUC ID="FooterWUC1" runat="server" />
+		    </td>
+		
+	</tr>
+            <tr>
+                <td>
+                    <hr width="70%" margin="auto" />
+                    <center><asp:Label ID="Label2" runat="server" Text="جميع الحقوق محفوظة &lt; كلية تقانة المعلومات الافتراضية &gt; &amp;copy 2015" Font-Names="Agency FB" ForeColor="DarkGray" Font-Size="Small" ></asp:Label></center>
+                </td>
+            </tr>
+        </table>
+    
+    </form>
+</body>
+</html>

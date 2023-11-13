@@ -1,0 +1,4 @@
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\bin\_WebCamSender.Web.pdb
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.dll
+E:\mm\SenderAndReceiver\SocketCoder_WebCamSender.Web\obj\Debug\_WebCamSender.Web.pdb
